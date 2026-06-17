@@ -10,16 +10,32 @@ body {
 
 h1 {
     font-size: 3rem;
+    margin-bottom: 100px;
 }
 
 .choices {
-    margin-bottom: 25px;
+    margin-bottom: 35px;
 }
 
 .choiceBtn {
     font-size: 6rem;
+    min-width: 160px;
+    border-radius: 50%;
+    background-color: rgb(123, 225, 225);
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+.choices button:hover{
+    background-color: aqua;
 }
 
 .choices #topBtn {
     justify-self: center;
+    margin-bottom: 150px;
+}
+
+.choices #bottomBtns {
+    display: flex;
+    gap: 150px;
 }
