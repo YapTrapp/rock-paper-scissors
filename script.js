@@ -12,28 +12,53 @@
 
         // Make computer choose an option each time player chooses an option
         const computerChoice = choices[Math.floor(Math.random() * 3)];
-
-        console.log(computerChoice);
+        // Make result to be displayed later
         let result = "";
-
+        // If the player's choice matches the computer's choice, make the result a tie
         if(playerChoice === computerChoice){
             result = "IT'S A DRAW!!";
         }
         else{
+            // Make a switch with a case for each potential player choice
             switch(playerChoice){
                 case "rock":
+                    // If the player's choice is rock but the computer's choice is paper, you win.
+                    // Otherwise you lose
                    result = (computerChoice === "scissors") ? "FATALITY!" : "WASTED...";
                    break;
                 case "paper":
+                    // If the player's choice is paper but the computer's choice is rock, you win.
+                    // Otherwise you lose
                    result = (computerChoice === "rock") ? "FATALITY!" : "WASTED...";
                    break;
                 case "scissors":
+                    // If the player's choice is scissors but the computer's choice is paper, you win.
+                    // Otherwise you lose
                    result = (computerChoice === "paper") ? "FATALITY!" : "WASTED...";
                    break;
             }
         }
-
+        // Make player display and computer display display respective choices
         playerDisplay.textContent = `PLAYER: ${playerChoice}`;
         computerDisplay.textContent = `COMPUTER: ${computerChoice}`;
+        // Make result display display the result
         resultDisplay.textContent = result;
+
+        // Want to change text color depending on win conditions
+
+        // Remove text color classes before the switch or the text will stay red on every condition
+        resultDisplay.classList.remove("greenText", "redText");
+
+        // Make switch to change text color
+        switch(result){
+            // If player wins, turn text green
+            case "FATALITY!":
+                resultDisplay.classList.add("greenText");
+                break;
+            // If player loses, turn text red
+            case "WASTED...":
+                resultDisplay.classList.add("redText");
+                break;
+        }
+
     }
