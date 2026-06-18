@@ -15,6 +15,12 @@ h1 {
 
 .choices {
     margin-bottom: 35px;
+    background-image: url(images/boxing-ring.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 2.5rem;
+    border-radius: 10px;
 }
 
 .choiceBtn {
@@ -38,4 +44,13 @@ h1 {
 .choices #bottomBtns {
     display: flex;
     gap: 150px;
+}
+
+#playerDisplay, #computerDisplay {
+    font-size: 2rem;
+}
+
+#resultDisplay {
+    font-size: 3rem;
+    margin: 25px 0;
 }
