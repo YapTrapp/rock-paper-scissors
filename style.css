@@ -54,11 +54,27 @@ h1{
     margin: 25px 0;
 }
 
-.greenText{
+.scoreDisplay{
+    font-size: 1.5rem;
+}
+
+.greenText, #playerScoreDisplay{
     color: rgb(61, 223, 61);
 
 }
 
-.redText{
+.redText, #computerScoreDisplay{
     color: rgb(241, 52, 52);
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+}
+
+a{
+    text-decoration: none;
+    color: black
 }

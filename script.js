@@ -5,7 +5,11 @@
     const choices = ["rock", "paper", "scissors"];
     const playerDisplay = document.getElementById("playerDisplay");
     const computerDisplay = document.getElementById("computerDisplay");
-    const resultDisplay = document.getElementById("resultDisplay")
+    const resultDisplay = document.getElementById("resultDisplay");
+    const playerScoreDisplay = document.getElementById("playerScoreDisplay");
+    const computerScoreDisplay = document.getElementById("computerScoreDisplay");
+    let playerScore = 0;
+    let computerScore = 0;
 
     // Need function playGame to accept argument of player's choice
     function playGame(playerChoice){
@@ -54,10 +58,18 @@
             // If player wins, turn text green
             case "FATALITY!":
                 resultDisplay.classList.add("greenText");
+                // Increase player score when player wins
+                playerScore++;
+                // Update player score display to show player score
+                playerScoreDisplay.textContent = playerScore;
                 break;
             // If player loses, turn text red
             case "WASTED...":
                 resultDisplay.classList.add("redText");
+                // Increase computer score when computer wins
+                computerScore++;
+                // Update computer score display to show computer score
+                computerScoreDisplay.textContent = computerScore;
                 break;
         }
 
